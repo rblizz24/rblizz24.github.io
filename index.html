@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ironclad: Battle Tank</title>
+<meta name="description" content="Ironclad: Battle Tank is a top-down tank roguelike for Android. Drive to dodge, stop to fire, pick an upgrade every wave and survive three fronts.">
+<meta name="theme-color" content="#14110E">
+<meta property="og:title" content="Ironclad: Battle Tank">
+<meta property="og:description" content="Top-down tank roguelike. Drive to dodge, stop to fire, survive three fronts.">
+<meta property="og:image" content="https://rblizz24.github.io/img/logo.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  @font-face { font-family: "Bebas Neue"; src: url("fonts/BebasNeue.otf") format("opentype"); font-display: swap; }
+  :root {
+    --bg: #14110E; --panel: #1C1915; --ink: #E6D9BF; --muted: #A99178; --rule: #3A3529;
+    --accent: #D9A441; --olive: #6E7446; --olive-hi: #8A9158; --rust: #B5552E;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; color: var(--ink);
+    background: radial-gradient(ellipse at 50% 0%, #2A2418 0%, var(--bg) 60%) no-repeat, var(--bg);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 24px 16px 48px; }
+  .hero { text-align: center; }
+  .hero img { width: min(520px, 100%); height: auto; display: block; margin: 0 auto; }
+  .tag {
+    font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: 0.05em; font-size: 26px;
+    color: var(--accent); margin: 4px 0 4px;
+  }
+  .lede { color: var(--muted); margin: 0 auto 24px; max-width: 560px; }
+  .actions { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .btn {
+    display: inline-block; min-width: 280px; padding: 14px 24px; border-radius: 8px; text-align: center;
+    font-family: "Bebas Neue", Impact, sans-serif; letter-spacing: 0.05em; font-size: 26px; line-height: 1;
+    text-decoration: none; color: var(--ink);
+  }
+  .btn.play { background: var(--olive); border: 2px solid var(--olive-hi); box-shadow: 0 4px 0 #0008; }
+  .btn.play:hover, .btn.play:focus-visible { background: var(--olive-hi); }
+  .btn small { display: block; font-family: system-ui, sans-serif; letter-spacing: 0; font-size: 13px; color: #E6D9BFcc; margin-top: 6px; }
+  .stores { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .store {
+    padding: 10px 16px; border-radius: 8px; border: 1px solid var(--rule); background: var(--panel);
+    color: var(--muted); font-size: 14px; min-width: 200px; text-align: center;
+  }
+  .store b { display: block; color: var(--ink); font-weight: 600; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 40px 0 8px; }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--rule); }
+  .shots figcaption { text-align: center; color: var(--muted); font-size: 13px; margin-top: 6px; }
+  h2 {
+    font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; letter-spacing: 0.04em; font-size: 30px;
+    color: var(--accent); text-align: center; margin: 40px 0 12px;
+  }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; padding: 0; list-style: none; margin: 0; }
+  .features li { background: var(--panel); border: 1px solid var(--rule); border-left: 4px solid var(--olive); border-radius: 6px; padding: 12px 14px; }
+  .features b { display: block; }
+  .features span { color: var(--muted); font-size: 15px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 14px; text-align: center; }
+  footer a { color: var(--accent); }
+  @media (max-width: 480px) {
+    .btn { min-width: 0; width: 100%; }
+    .store { min-width: 0; flex: 1 1 100%; }
+    .shots { gap: 8px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <img src="img/logo.webp" width="720" height="480" alt="Ironclad: Battle Tank">
+    <p class="tag">Drive to dodge. Stop to fire.</p>
+    <p class="lede">A top-down tank roguelike for Android. Pick an upgrade after every wave, bring down a boss every tenth, and call the Chinook before your armor gives out.</p>
+    <div class="actions">
+      <a class="btn play" href="https://rblizz24.github.io/Ironclad-free/">Play free in your browser<small>Ironclad Free: Endless on the Verdant Front</small></a>
+      <div class="stores">
+        <div class="store"><b>Ironclad: Battle Tank</b>Google Play: coming soon</div>
+        <div class="store"><b>Ironclad: Battle Tank Free</b>Google Play: coming soon</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shots">
+    <figure><img src="img/combat.jpg" width="540" height="1170" alt="An Ironclad tank fighting through wave 7 on the Verdant Front" loading="lazy"><figcaption>Three war-torn fronts</figcaption></figure>
+    <figure><img src="img/upgrades.jpg" width="540" height="1170" alt="Choosing one of three upgrades after a wave" loading="lazy"><figcaption>An upgrade every wave</figcaption></figure>
+    <figure><img src="img/boss.jpg" width="540" height="1170" alt="The GOLIATH boss super-heavy tank" loading="lazy"><figcaption>A boss every tenth wave</figcaption></figure>
+  </div>
+
+  <h2>The full game</h2>
+  <ul class="features">
+    <li><b>Campaign</b><span>The Verdant Front, Hollow Fields and Altstadt against GOLIATH, REAPER and BASTION, then the secret Iron Tundra.</span></li>
+    <li><b>Six vehicles</b><span>From the Ironclad main battle tank to the Mammoth assault gun, each with its own exclusive upgrade.</span></li>
+    <li><b>66 upgrades</b><span>Unlock new ones for your pool with Requisition earned between runs.</span></li>
+    <li><b>Escalation and Endless</b><span>Ten levels of Escalation for veterans, and a pure score chase on any front.</span></li>
+  </ul>
+
+  <footer>
+    <a href="privacy.html">Privacy policy</a> &middot; Ironclad: Battle Tank &copy; 2026
+  </footer>
+</main>
+</body>
+</html>
